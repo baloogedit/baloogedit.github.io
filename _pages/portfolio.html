@@ -7,8 +7,38 @@ author_profile: true
 
 {% include base_path %}
 
+<h1>Az egyetemi élet pillanatai</h1>
 
+<!-- Egyszerű CSS grid a képek egymás melletti megjelenítéséhez (ha a képernyő engedi) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
+
+  <!-- 1. Kép -->
+  <figure style="margin: 0;">
+    <img src="/images/konyvtar.jpg" alt="Három egyetemista ül egy nagy asztalnál a könyvtárban, laptopokon dolgoznak és jegyzetelnek.">
+    <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+      Közös kutatómunka és felkészülés a vizsgaidőszakra a központi könyvtárban. A csendes környezet elengedhetetlen a fókuszált tanuláshoz.
+    </figcaption>
+  </figure>
+
+  <!-- 2. Kép -->
+  <figure style="margin: 0;">
+    <img src="/images/eloadas.jpg" alt="Egy zsúfolt egyetemi előadóterem, ahol a hallgatók a kivetítőt nézik, miközben a professzor magyaráz.">
+    <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+      Érdekes vendégelőadás az egyetem dísztermében. Az interaktív viták és a gyakorlati példák mindig feldobják a tananyagot.
+    </figcaption>
+  </figure>
+
+  <!-- 3. Kép -->
+  <figure style="margin: 0;">
+    <img src="/assets/images/kampusz.jpg" alt="Diákok beszélgetnek és kávéznak az egyetem füves udvarán, a háttérben az egyetem főépülete látható.">
+    <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+      Két óra közötti szünet a kampuszon, ahol a szaktársakkal lehet megvitatni a nap eseményeit. Az egyetemi közösségi élet legalább olyan fontos, mint a tanulás.
+    </figcaption>
+  </figure>
+
+</div>
+
+<!-- Ha használsz külön portfólió bejegyzéseket a _portfolio mappában, ez a rész listázza őket -->
 {% for post in site.portfolio %}
   {% include archive-single.html %}
 {% endfor %}
-
